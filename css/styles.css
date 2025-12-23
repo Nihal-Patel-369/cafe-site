@@ -545,4 +545,200 @@ textarea.form-control {
     .btn {
         padding: 10px 20px;
     }
+
+}
+
+/* Event Gallery Styles */
+.event-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.event-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    align-items: center;
+}
+
+.event-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 2px;
+    border: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.event-image img,
+.event-image video {
+    transition: transform 0.6s ease;
+    width: 100%;
+    display: block;
+}
+
+.event-grid:hover .event-image img,
+.event-grid:hover .event-image video {
+    transform: scale(1.05);
+}
+
+.event-content {
+    padding: var(--spacing-lg);
+}
+
+.event-content h2 {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-primary);
+}
+
+.event-content p {
+    margin-bottom: var(--spacing-md);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+/* Reverse layout for alternating sections */
+.event-grid.reverse .event-content {
+    order: -1;
+    /* Ensures content comes first visually in grid, but we also handle in media query */
+}
+
+
+@media (max-width: 900px) {
+
+    .event-grid,
+    .event-grid.reverse {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+
+    .event-content {
+        padding: 0;
+        text-align: center;
+    }
+
+    .event-content h2 {
+        font-size: 2.2rem;
+    }
+
+    /* Reset order for mobile so image is always on top if desired, or keep as is */
+    .event-grid.reverse .event-content {
+        order: 0;
+    }
+
+    .event-grid.reverse .event-image {
+        order: -1;
+    }
+
+    .event-grid .event-image {
+        order: -1;
+    }
+}
+
+/* Night Life Immersive Section (Vertical Video Optimized) */
+.night-life-section {
+    position: relative;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(135deg, #0a0a0a 0%, #151515 100%);
+    overflow: hidden;
+    padding: 0 5%;
+    gap: 60px;
+    /* Added explicit gap for separation */
+}
+
+.night-life-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 70% 50%, rgba(212, 175, 55, 0.1), transparent 60%);
+    z-index: 0;
+}
+
+.night-life-video {
+    position: relative;
+    width: auto;
+    height: 80vh;
+    aspect-ratio: 9/16;
+    border-radius: 12px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(212, 175, 55, 0.3);
+    z-index: 1;
+    overflow: hidden;
+    margin-left: auto;
+    flex-shrink: 0;
+}
+
+.night-life-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.night-life-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+    z-index: 2;
+}
+
+.night-life-content {
+    position: relative;
+    z-index: 2;
+    max-width: 500px;
+    padding: 0;
+    margin-right: var(--spacing-xl);
+    background: transparent;
+    border: none;
+    backdrop-filter: none;
+}
+
+.night-life-content h2 {
+    font-size: 4rem;
+    margin-bottom: var(--spacing-md);
+    background: linear-gradient(to right, #D4AF37, #F2D06B);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.1;
+}
+
+.night-life-content p {
+    font-size: 1.15rem;
+    color: #B0B0B0;
+    margin-bottom: var(--spacing-md);
+}
+
+@media (max-width: 900px) {
+    .night-life-section {
+        flex-direction: column;
+        justify-content: center;
+        padding: 60px 20px;
+        height: auto;
+    }
+
+    .night-life-video {
+        width: 80%;
+        height: auto;
+        aspect-ratio: 9/16;
+        margin: 40px auto 0;
+        order: 2;
+    }
+
+    .night-life-content {
+        width: 100%;
+        max-width: 100%;
+        margin-right: 0;
+        text-align: center;
+        order: 1;
+    }
+
+    .night-life-content h2 {
+        font-size: 2.8rem;
+    }
 }

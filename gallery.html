@@ -26,38 +26,103 @@
         </div>
     </nav>
 
-    <header class="menu-header">
-        <div class="container">
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="video-background">
+            <video autoplay muted loop playsinline>
+                <source src="video/hero bg of gallary.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay"></div>
+        </div>
+        <div class="container text-center hero-content reveal">
             <h4 class="text-gold uppercase">Atmosphere</h4>
-            <h1>Visual Experience</h1>
-            <p class="text-secondary">Immerse yourself in our world.</p>
+            <h1 class="hero-title">Visual Experience</h1>
+            <p class="hero-subtitle">Immerse yourself in our world.</p>
         </div>
     </header>
 
-    <section class="section">
+    <!-- Daily Night Life Section (Immersive) -->
+    <section class="night-life-section reveal">
+        <div class="night-life-video">
+            <video id="nightLifeVideo" muted playsinline>
+                <source src="video/daily night life video.mp4" type="video/mp4">
+            </video>
+            <div class="night-life-overlay"></div>
+        </div>
+        <div class="night-life-content reveal">
+            <h4 class="text-gold uppercase">The Vibe</h4>
+            <h2>Daily Night Life</h2>
+            <p>When the sun sets, WhitesSand transforms into the city's most vibrant social destination. Experience an
+                electric atmosphere where luxury meets nightlife.</p>
+            <br>
+            <p>Featuring curated playlists, ambient lighting, and a crowd that knows how to enjoy the finer things in
+                life.</p>
+            <br>
+            <a href="contact.html" class="btn">Experience the Night</a>
+        </div>
+    </section>
+
+    <section class="section event-section">
         <div class="container">
-            <div class="gallery-grid reveal">
-                <div class="gallery-item"><img
-                        src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=800"
-                        alt="Cafe Detail 1"></div>
-                <div class="gallery-item"><img
-                        src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=800"
-                        alt="Coffee Pour"></div>
-                <div class="gallery-item"><img
-                        src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&q=80&w=800"
-                        alt="Interior Seating"></div>
-                <div class="gallery-item"><img
-                        src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=800"
-                        alt="Restaurant Vibe"></div>
-                <div class="gallery-item"><img
-                        src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&q=80&w=800"
-                        alt="Latte Art"></div>
-                <div class="gallery-item"><img
-                        src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&q=80&w=800"
-                        alt="Cozy Corner"></div>
+            <div class="event-grid">
+                <div class="event-image reveal">
+                    <img src="https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&q=80&w=800"
+                        alt="Jazz Night">
+                </div>
+                <div class="event-content reveal">
+                    <h4 class="text-gold uppercase">Monthly Special</h4>
+                    <h2>Jazz Night</h2>
+                    <p class="text-secondary">Immerse yourself in the soulful rhythms of our monthly Jazz Night.
+                        Experienced musicians, a calibrated sound system, and an intimate atmosphere create the perfect
+                        backdrop for conversation and relaxation.</p>
+                    <p class="text-secondary">Paired with our signature late-night espresso martinis.</p>
+                    <a href="contact.html" class="link-gold">Reserve Your Seat &rarr;</a>
+                </div>
             </div>
         </div>
     </section>
+
+    <section class="section event-section bg-secondary">
+        <div class="container">
+            <div class="event-grid reverse">
+                <div class="event-content reveal">
+                    <h4 class="text-gold uppercase">Tasting Experience</h4>
+                    <h2>Vintage Wine Tasting</h2>
+                    <p class="text-secondary">Discover exquisite vintages from around the world. Our sommeliers guide
+                        you through a curated selection of wines, perfectly paired with artisanal cheeses and
+                        chocolates.</p>
+                    <p class="text-secondary">An educational and sensory journey for both connoisseurs and casual
+                        drinkers.</p>
+                    <a href="contact.html" class="link-gold">Book a Tasting &rarr;</a>
+                </div>
+                <div class="event-image reveal">
+                    <img src="https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&q=80&w=800"
+                        alt="Wine Tasting">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section event-section">
+        <div class="container">
+            <div class="event-grid">
+                <div class="event-image reveal">
+                    <img src="https://images.unsplash.com/photo-1519671482538-518b5c2bf7c6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Private Events">
+                </div>
+                <div class="event-content reveal">
+                    <h4 class="text-gold uppercase">Celebrations</h4>
+                    <h2>Private Events</h2>
+                    <p class="text-secondary">Host your special moments with us. From intimate birthdays to corporate
+                        gatherings, our dedicated events team ensures every detail is flawless.</p>
+                    <p class="text-secondary">Customizable menus, private seating areas, and personalized service.</p>
+                    <a href="contact.html" class="link-gold">Inquire Now &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 
     <footer class="footer">
         <div class="container text-center">
@@ -67,6 +132,7 @@
             <p>&copy; 2025 WhitesSand.</p>
         </div>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

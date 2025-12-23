@@ -30,4 +30,29 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', revealOnScroll);
     // Trigger once on load
     revealOnScroll();
+
+    // Slow down Night Life Video & Custom Loop (Start at 6s)
+    const nightLifeVideo = document.getElementById('nightLifeVideo');
+    if (nightLifeVideo) {
+        nightLifeVideo.playbackRate = 0.6;
+
+        const startVideo = () => {
+            if (nightLifeVideo.currentTime < 6) {
+                nightLifeVideo.currentTime = 6;
+            }
+            nightLifeVideo.play().catch(e => console.log("Autoplay prevented:", e));
+        };
+
+        if (nightLifeVideo.readyState >= 1) {
+            startVideo();
+        } else {
+            nightLifeVideo.addEventListener('loadedmetadata', startVideo);
+        }
+
+        // Loop back to 6s instead of 0
+        nightLifeVideo.addEventListener('ended', () => {
+            nightLifeVideo.currentTime = 6;
+            nightLifeVideo.play();
+        });
+    }
 });
