@@ -15,20 +15,6 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="css/styles.css">
-    <!-- Inline styles for placeholders -->
-    <style>
-        .hero {
-            background: linear-gradient(rgba(15, 15, 15, 0.7), rgba(15, 15, 15, 0.7)),
-                url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&q=80&w=1920');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-    </style>
 </head>
 
 <body>
@@ -50,6 +36,12 @@
 
     <!-- Hero Section -->
     <header class="hero">
+        <div class="video-background">
+            <video autoplay muted loop playsinline>
+                <source src="video/cafe short video.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay"></div>
+        </div>
         <div class="container text-center hero-content reveal">
             <h1 class="hero-title">Where Luxury <br>Meets <span class="text-gold">Taste</span></h1>
             <p class="hero-subtitle">Experience the finest coffee in an atmosphere of pure elegance.</p>

@@ -171,20 +171,50 @@ img {
 
 /* Hero Section */
 .hero {
-    /* Background handled inline in HTML for ease of replacement, 
-       but we can add a fallback here */
-    background-color: var(--bg-secondary);
-    min-height: 100vh;
+    position: relative;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    overflow: hidden;
     margin-top: -80px;
     /* Counteract header height */
     padding-top: 80px;
 }
 
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensures video covers area even if aspect ratio differs */
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 15, 15, 0.6);
+    /* Dark overlay for text readability */
+    z-index: 1;
+}
+
 .hero-content {
     max-width: 800px;
+    z-index: 2;
+    /* Ensure content is above video overlay */
+    position: relative;
 }
 
 .hero-title {
