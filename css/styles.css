@@ -530,11 +530,41 @@ textarea.form-control {
 
     .story-grid {
         grid-template-columns: 1fr;
+        position: relative;
+        /* Ensure enough space for scroll animation */
+        min-height: 150vh;
     }
 
     .story-image {
         order: -1;
-        margin-bottom: var(--spacing-md);
+        margin-bottom: 0;
+        position: relative;
+        z-index: 1;
+        will-change: transform, position;
+    }
+
+    .story-image video {
+        width: 100%;
+        display: block;
+    }
+
+    .story-section .story-text {
+        position: relative;
+        z-index: 10;
+        background: rgba(15, 15, 15, 0.95);
+        backdrop-filter: blur(10px);
+        padding: var(--spacing-lg);
+        border-radius: 8px;
+        margin-top: var(--spacing-lg);
+        border: 1px solid rgba(212, 175, 55, 0.2);
+        will-change: transform, opacity;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+    }
+
+    /* Smooth transitions for scroll effects */
+    .story-section .story-image,
+    .story-section .story-text {
+        transition: opacity 0.2s ease;
     }
 
     .contact-container {
