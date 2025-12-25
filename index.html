@@ -63,8 +63,29 @@
 
 <body>
 
+    <!-- Welcome Screen -->
+    <div class="welcome-screen" id="welcomeScreen">
+        <div class="welcome-content">
+            <div class="welcome-logo">
+                <img src="images/logo.png" alt="WhitesSand Logo" width="100" height="100">
+                <div class="logo-glow"></div>
+            </div>
+            <div class="welcome-taglines">
+                <p class="tagline tagline-1">🏖️ Sip, Chill & Unwind by the Pool</p>
+                <p class="tagline tagline-2">🌴 Habibi Vibes in the Heart of Surat</p>
+            </div>
+            <div class="welcome-particles">
+                <div class="welcome-particle"></div>
+                <div class="welcome-particle"></div>
+                <div class="welcome-particle"></div>
+                <div class="welcome-particle"></div>
+            </div>
+        </div>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar">
+        <div class="scroll-progress"></div>
         <div class="container nav-container">
             <a href="index.html" class="logo"><img src="images/logo.png" alt="WhitesSand Best Luxury Cafe in Surat Logo"
                     width="50" height="50"></a>
@@ -86,13 +107,33 @@
                 <source src="video/cafe short video.mp4" type="video/mp4">
             </video>
             <div class="video-overlay"></div>
+            <div class="floating-particles">
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+                <div class="particle"></div>
+            </div>
         </div>
         <div class="container text-center hero-content reveal">
-            <h1 class="hero-title">Best Luxury Cafe in Surat<br><span class="brand-name uppercase"><span
-                        class="drop-cap">W</span>hitesSand Cafe</span></h1>
+            <div class="hero-badge">
+                <span class="badge-text">Luxury Redefined</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="gradient-text">Best Luxury Cafe</span> in Surat<br>
+                <span class="brand-name uppercase"><span class="drop-cap">W</span>hitesSand Cafe</span>
+            </h1>
             <p class="hero-subtitle">Experience the finest bistro & pool lounging in an atmosphere of pure elegance.</p>
             <div class="hero-buttons">
-                <a href="menu.html" class="btn">View Menu</a>
+                <a href="menu.html" class="btn btn-luxury">View Menu</a>
+                <a href="contact.html" class="btn btn-outline">Reserve Now</a>
+            </div>
+            <div class="scroll-indicator">
+                <span>Scroll</span>
+                <div class="scroll-line"></div>
             </div>
         </div>
     </header>
@@ -188,31 +229,51 @@
             <p class="text-gold uppercase"
                 style="font-family: var(--font-heading); font-size: 1.2rem; font-weight: 600;">Why Choose Us</p>
             <h2>Premium Amenities</h2>
-            <div class="menu-grid" style="margin-top: 48px;">
-                <div class="menu-card reveal">
-                    <div style="font-size: 3rem; margin-bottom: 16px;">🏊</div>
+            <div class="menu-grid luxury-features-grid" style="margin-top: 48px;">
+                <div class="menu-card luxury-feature-card reveal">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon" style="font-size: 3rem; margin-bottom: 16px;">🏊</div>
+                        <div class="feature-glow"></div>
+                    </div>
                     <h3>Luxury Pool</h3>
                     <p>Dive into relaxation at our pristine poolside lounge.</p>
+                    <div class="card-accent-line"></div>
                 </div>
-                <div class="menu-card reveal">
-                    <div style="font-size: 3rem; margin-bottom: 16px;">☕</div>
+                <div class="menu-card luxury-feature-card reveal">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon" style="font-size: 3rem; margin-bottom: 16px;">☕</div>
+                        <div class="feature-glow"></div>
+                    </div>
                     <h3>Artisan Coffee</h3>
                     <p>Ethically sourced beans, expertly crafted beverages.</p>
+                    <div class="card-accent-line"></div>
                 </div>
-                <div class="menu-card reveal">
-                    <div style="font-size: 3rem; margin-bottom: 16px;">📶</div>
+                <div class="menu-card luxury-feature-card reveal">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon" style="font-size: 3rem; margin-bottom: 16px;">📶</div>
+                        <div class="feature-glow"></div>
+                    </div>
                     <h3>Free WiFi</h3>
                     <p>High-speed internet for work or leisure.</p>
+                    <div class="card-accent-line"></div>
                 </div>
-                <div class="menu-card reveal">
-                    <div style="font-size: 3rem; margin-bottom: 16px;">🎵</div>
+                <div class="menu-card luxury-feature-card reveal">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon" style="font-size: 3rem; margin-bottom: 16px;">🎵</div>
+                        <div class="feature-glow"></div>
+                    </div>
                     <h3>Live Events</h3>
                     <p>DJ nights, jazz evenings, and special performances.</p>
+                    <div class="card-accent-line"></div>
                 </div>
-                <div class="menu-card reveal">
-                    <div style="font-size: 3rem; margin-bottom: 16px;">🍽️</div>
+                <div class="menu-card luxury-feature-card reveal">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon" style="font-size: 3rem; margin-bottom: 16px;">🍽️</div>
+                        <div class="feature-glow"></div>
+                    </div>
                     <h3>Gourmet Dining</h3>
                     <p>Curated menu with international flavors.</p>
+                    <div class="card-accent-line"></div>
                 </div>
             </div>
         </div>

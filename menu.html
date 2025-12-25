@@ -9,8 +9,10 @@
         content="Explore our curated menu of signature mocktails, cold brews, and gourmet pastries. The finest dining experience in Surat.">
     <link rel="icon" type="image/png" href="images/logo.png">
     <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
         rel="stylesheet">
 
     <!-- Styles -->
@@ -37,220 +39,424 @@
     <!-- Menu Header -->
     <header class="menu-header">
         <div class="container">
-            <h4 class="text-gold uppercase">Our Selection</h4>
-            <h1>Exquisite Menu</h1>
-            <p class="text-secondary">Explore flavors crafted with passion and precision.</p>
+            <h4 class="text-gold uppercase" style="font-family: var(--font-heading); font-size: 1.2rem; font-weight: 600;">Our Selection</h4>
+            <h1 style="font-size: 4rem; margin: 20px 0; color: var(--text-primary);">Exquisite Menu</h1>
+            <p class="text-secondary" style="font-size: 1.1rem; max-width: 600px; margin: 0 auto;">Explore flavors crafted with passion and precision.</p>
         </div>
     </header>
 
     <!-- Menu Sections -->
     <section class="section">
-        <div class="container full-menu-list reveal">
+        <div class="container">
 
-            <div class="menu-category">
-                <h2 class="menu-section-title">Signature Mocktails</h2>
-
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h4>Mojito</h4>
-                        <p>Classic Lemon Mint / Strawberry / Green Apple</p>
-                    </div>
-                    <div class="menu-item-price">295</div>
+            <!-- Signature Mocktails -->
+            <div class="menu-category-section reveal">
+                <div class="category-header">
+                    <div class="category-icon">🍹</div>
+                    <h2 class="menu-section-title">Signature Mocktails</h2>
+                    <p class="category-subtitle">Refreshing blends crafted with premium ingredients</p>
                 </div>
-
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h4>Berry Blast</h4>
-                        <p>Mix berries, red lime, lemon grass, aerated water</p>
+                <div class="luxury-menu-grid">
+                    <div class="luxury-menu-card reveal">
+                        <div class="menu-card-image">
+                            <img src="https://images.unsplash.com/photo-1551538827-9c037cb4f32a?auto=format&fit=crop&q=80&w=600" alt="Mojito" loading="lazy">
+                            <div class="menu-card-overlay"></div>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-card-header">
+                                <h3>Mojito</h3>
+                                <span class="menu-price">₹295</span>
+                            </div>
+                            <p class="menu-description">Classic Lemon Mint / Strawberry / Green Apple</p>
+                        </div>
                     </div>
-                    <div class="menu-item-price">345</div>
-                </div>
 
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h4>Jalapeno Orange</h4>
-                        <p>Indian spice, jalapeno, orange twist, aerated water</p>
+                    <div class="luxury-menu-card reveal">
+                        <div class="menu-card-image">
+                            <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&q=80&w=600" alt="Berry Blast" loading="lazy">
+                            <div class="menu-card-overlay"></div>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-card-header">
+                                <h3>Berry Blast</h3>
+                                <span class="menu-price">₹345</span>
+                            </div>
+                            <p class="menu-description">Mix berries, red lime, lemon grass, aerated water</p>
+                        </div>
                     </div>
-                    <div class="menu-item-price">345</div>
-                </div>
 
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h4>Tender Colada</h4>
-                        <p>Tender coconut cream, mixed fruits, smooth milky</p>
+                    <div class="luxury-menu-card reveal">
+                        <div class="menu-card-image">
+                            <img src="https://images.unsplash.com/photo-1551538827-9c037cb4f32a?auto=format&fit=crop&q=80&w=600" alt="Jalapeno Orange" loading="lazy">
+                            <div class="menu-card-overlay"></div>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-card-header">
+                                <h3>Jalapeno Orange</h3>
+                                <span class="menu-price">₹345</span>
+                            </div>
+                            <p class="menu-description">Indian spice, jalapeno, orange twist, aerated water</p>
+                        </div>
                     </div>
-                    <div class="menu-item-price">375</div>
-                </div>
 
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h4>Pickle Pitch</h4>
-                        <p>Pickle, kokum crush, lemonade, fizzy aerated water</p>
+                    <div class="luxury-menu-card reveal">
+                        <div class="menu-card-image">
+                            <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&q=80&w=600" alt="Tender Colada" loading="lazy">
+                            <div class="menu-card-overlay"></div>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-card-header">
+                                <h3>Tender Colada</h3>
+                                <span class="menu-price">₹375</span>
+                            </div>
+                            <p class="menu-description">Tender coconut cream, mixed fruits, smooth milky</p>
+                        </div>
                     </div>
-                    <div class="menu-item-price">375</div>
-                </div>
 
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h4>Rose Royce</h4>
-                        <p>Rich rose, raspberry, lemon zest, chia</p>
+                    <div class="luxury-menu-card reveal">
+                        <div class="menu-card-image">
+                            <img src="https://images.unsplash.com/photo-1551538827-9c037cb4f32a?auto=format&fit=crop&q=80&w=600" alt="Pickle Pitch" loading="lazy">
+                            <div class="menu-card-overlay"></div>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-card-header">
+                                <h3>Pickle Pitch</h3>
+                                <span class="menu-price">₹375</span>
+                            </div>
+                            <p class="menu-description">Pickle, kokum crush, lemonade, fizzy aerated water</p>
+                        </div>
                     </div>
-                    <div class="menu-item-price">395</div>
-                </div>
 
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h4>French Kiss</h4>
-                        <p>Espresso coffee, French vanilla, citrus, vanilla cream</p>
+                    <div class="luxury-menu-card reveal">
+                        <div class="menu-card-image">
+                            <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&q=80&w=600" alt="Rose Royce" loading="lazy">
+                            <div class="menu-card-overlay"></div>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-card-header">
+                                <h3>Rose Royce</h3>
+                                <span class="menu-price">₹395</span>
+                            </div>
+                            <p class="menu-description">Rich rose, raspberry, lemon zest, chia</p>
+                        </div>
                     </div>
-                    <div class="menu-item-price">395</div>
+
+                    <div class="luxury-menu-card reveal">
+                        <div class="menu-card-image">
+                            <img src="https://images.unsplash.com/photo-1551538827-9c037cb4f32a?auto=format&fit=crop&q=80&w=600" alt="French Kiss" loading="lazy">
+                            <div class="menu-card-overlay"></div>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-card-header">
+                                <h3>French Kiss</h3>
+                                <span class="menu-price">₹395</span>
+                            </div>
+                            <p class="menu-description">Espresso coffee, French vanilla, citrus, vanilla cream</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <br><br>
+            <!-- Hot Coffee -->
+            <div class="menu-category-section reveal" style="margin-top: 100px;">
+                <div class="category-header">
+                    <div class="category-icon">☕</div>
+                    <h2 class="menu-section-title">Hot Coffee</h2>
+                    <p class="category-subtitle">Artisan brews from ethically sourced beans</p>
+                </div>
+                <div class="luxury-menu-grid">
+                    <div class="luxury-menu-card reveal">
+                        <div class="menu-card-image">
+                            <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=600" alt="Espresso" loading="lazy">
+                            <div class="menu-card-overlay"></div>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-card-header">
+                                <h3>Espresso</h3>
+                                <span class="menu-price">₹135</span>
+                            </div>
+                        </div>
+                    </div>
 
-            <div class="menu-category">
-                <h2 class="menu-section-title">Hot Coffee</h2>
+                    <div class="luxury-menu-card reveal">
+                        <div class="menu-card-image">
+                            <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=600" alt="Macchiato" loading="lazy">
+                            <div class="menu-card-overlay"></div>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-card-header">
+                                <h3>Macchiato</h3>
+                                <span class="menu-price">₹175</span>
+                            </div>
+                        </div>
+                    </div>
 
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h4>Espresso</h4>
+                    <div class="luxury-menu-card reveal">
+                        <div class="menu-card-image">
+                            <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=600" alt="Americano" loading="lazy">
+                            <div class="menu-card-overlay"></div>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-card-header">
+                                <h3>Americano</h3>
+                                <span class="menu-price">₹195</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="menu-item-price">135</div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h4>Macchiato</h4>
+
+                    <div class="luxury-menu-card reveal">
+                        <div class="menu-card-image">
+                            <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&q=80&w=600" alt="Latte" loading="lazy">
+                            <div class="menu-card-overlay"></div>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-card-header">
+                                <h3>Latte</h3>
+                                <span class="menu-price">₹255</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="menu-item-price">175</div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h4>Americano</h4>
+
+                    <div class="luxury-menu-card reveal">
+                        <div class="menu-card-image">
+                            <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&q=80&w=600" alt="Cappuccino" loading="lazy">
+                            <div class="menu-card-overlay"></div>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-card-header">
+                                <h3>Cappuccino</h3>
+                                <span class="menu-price">₹255</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="menu-item-price">195</div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h4>Latte</h4>
+
+                    <div class="luxury-menu-card reveal">
+                        <div class="menu-card-image">
+                            <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&q=80&w=600" alt="Flat White" loading="lazy">
+                            <div class="menu-card-overlay"></div>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-card-header">
+                                <h3>Flat White</h3>
+                                <span class="menu-price">₹265</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="menu-item-price">255</div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h4>Cappuccino</h4>
+
+                    <div class="luxury-menu-card reveal">
+                        <div class="menu-card-image">
+                            <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=600" alt="Dark Mocha" loading="lazy">
+                            <div class="menu-card-overlay"></div>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-card-header">
+                                <h3>Dark Mocha</h3>
+                                <span class="menu-price">₹265</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="menu-item-price">255</div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h4>Flat White</h4>
+
+                    <div class="luxury-menu-card reveal">
+                        <div class="menu-card-image">
+                            <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&q=80&w=600" alt="Hot Spiced Chocolate" loading="lazy">
+                            <div class="menu-card-overlay"></div>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-card-header">
+                                <h3>Hot Spiced Chocolate</h3>
+                                <span class="menu-price">₹325</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="menu-item-price">265</div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h4>Dark Mocha</h4>
+
+                    <div class="luxury-menu-card reveal">
+                        <div class="menu-card-image">
+                            <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=600" alt="Affogato" loading="lazy">
+                            <div class="menu-card-overlay"></div>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-card-header">
+                                <h3>Affogato</h3>
+                                <span class="menu-price">₹315</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="menu-item-price">265</div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h4>Hot Spiced Chocolate</h4>
-                    </div>
-                    <div class="menu-item-price">325</div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h4>Affogato</h4>
-                    </div>
-                    <div class="menu-item-price">315</div>
                 </div>
             </div>
 
-            <br><br>
+            <!-- Cold Brew & Iced -->
+            <div class="menu-category-section reveal" style="margin-top: 100px;">
+                <div class="category-header">
+                    <div class="category-icon">🧊</div>
+                    <h2 class="menu-section-title">Cold Brew & Iced</h2>
+                    <p class="category-subtitle">Refreshing cold beverages for every moment</p>
+                </div>
+                <div class="luxury-menu-grid">
+                    <div class="luxury-menu-card reveal">
+                        <div class="menu-card-image">
+                            <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=600" alt="Classic Cold Brew" loading="lazy">
+                            <div class="menu-card-overlay"></div>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-card-header">
+                                <h3>Classic Cold Brew</h3>
+                                <span class="menu-price">₹210</span>
+                            </div>
+                        </div>
+                    </div>
 
-            <div class="menu-category">
-                <h2 class="menu-section-title">Cold Brew & Iced</h2>
+                    <div class="luxury-menu-card reveal">
+                        <div class="menu-card-image">
+                            <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=600" alt="Citrus Zest Cold Brew" loading="lazy">
+                            <div class="menu-card-overlay"></div>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-card-header">
+                                <h3>Citrus Zest Cold Brew</h3>
+                                <span class="menu-price">₹220</span>
+                            </div>
+                        </div>
+                    </div>
 
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h4>Classic Cold Brew</h4>
+                    <div class="luxury-menu-card reveal">
+                        <div class="menu-card-image">
+                            <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=600" alt="Salted Caramel Cold Brew" loading="lazy">
+                            <div class="menu-card-overlay"></div>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-card-header">
+                                <h3>Salted Caramel Cold Brew</h3>
+                                <span class="menu-price">₹250</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="menu-item-price">210</div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h4>Citrus Zest Cold Brew</h4>
+
+                    <div class="luxury-menu-card reveal">
+                        <div class="menu-card-image">
+                            <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=600" alt="Iced Americano" loading="lazy">
+                            <div class="menu-card-overlay"></div>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-card-header">
+                                <h3>Iced Americano</h3>
+                                <span class="menu-price">₹255</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="menu-item-price">220</div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h4>Salted Caramel Cold Brew</h4>
+
+                    <div class="luxury-menu-card reveal">
+                        <div class="menu-card-image">
+                            <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&q=80&w=600" alt="Iced Latte" loading="lazy">
+                            <div class="menu-card-overlay"></div>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-card-header">
+                                <h3>Iced Latte</h3>
+                                <span class="menu-price">₹275</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="menu-item-price">250</div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h4>Iced Americano</h4>
+
+                    <div class="luxury-menu-card reveal">
+                        <div class="menu-card-image">
+                            <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=600" alt="Iced Mocha" loading="lazy">
+                            <div class="menu-card-overlay"></div>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-card-header">
+                                <h3>Iced Mocha</h3>
+                                <span class="menu-price">₹295</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="menu-item-price">255</div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h4>Iced Latte</h4>
-                    </div>
-                    <div class="menu-item-price">275</div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h4>Iced Mocha</h4>
-                    </div>
-                    <div class="menu-item-price">295</div>
                 </div>
             </div>
 
-            <br><br>
+            <!-- Frappes & Shakes -->
+            <div class="menu-category-section reveal" style="margin-top: 100px;">
+                <div class="category-header">
+                    <div class="category-icon">🥤</div>
+                    <h2 class="menu-section-title">Frappes & Shakes</h2>
+                    <p class="category-subtitle">Indulgent frozen treats and creamy delights</p>
+                </div>
+                <div class="luxury-menu-grid">
+                    <div class="luxury-menu-card reveal">
+                        <div class="menu-card-image">
+                            <img src="https://images.unsplash.com/photo-1550617931-e17a7b70dce2?auto=format&fit=crop&q=80&w=600" alt="Coffee Frappe" loading="lazy">
+                            <div class="menu-card-overlay"></div>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-card-header">
+                                <h3>Coffee Frappe</h3>
+                                <span class="menu-price">₹325</span>
+                            </div>
+                        </div>
+                    </div>
 
-            <div class="menu-category">
-                <h2 class="menu-section-title">Frappes & Shakes</h2>
+                    <div class="luxury-menu-card reveal">
+                        <div class="menu-card-image">
+                            <img src="https://images.unsplash.com/photo-1550617931-e17a7b70dce2?auto=format&fit=crop&q=80&w=600" alt="Hazelnut Coffee Frappe" loading="lazy">
+                            <div class="menu-card-overlay"></div>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-card-header">
+                                <h3>Hazelnut Coffee Frappe</h3>
+                                <span class="menu-price">₹325</span>
+                            </div>
+                        </div>
+                    </div>
 
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h4>Coffee Frappe</h4>
+                    <div class="luxury-menu-card reveal">
+                        <div class="menu-card-image">
+                            <img src="https://images.unsplash.com/photo-1550617931-e17a7b70dce2?auto=format&fit=crop&q=80&w=600" alt="Classic Vanilla Shake" loading="lazy">
+                            <div class="menu-card-overlay"></div>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-card-header">
+                                <h3>Classic Vanilla Shake</h3>
+                                <span class="menu-price">₹295</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="menu-item-price">325</div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h4>Hazelnut Coffee Frappe</h4>
+
+                    <div class="luxury-menu-card reveal">
+                        <div class="menu-card-image">
+                            <img src="https://images.unsplash.com/photo-1550617931-e17a7b70dce2?auto=format&fit=crop&q=80&w=600" alt="Rocher Hazelnut Shake" loading="lazy">
+                            <div class="menu-card-overlay"></div>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-card-header">
+                                <h3>Rocher Hazelnut Shake</h3>
+                                <span class="menu-price">₹355</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="menu-item-price">325</div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h4>Classic Vanilla Shake</h4>
+
+                    <div class="luxury-menu-card reveal">
+                        <div class="menu-card-image">
+                            <img src="https://images.unsplash.com/photo-1550617931-e17a7b70dce2?auto=format&fit=crop&q=80&w=600" alt="Crumbly Oreo Shake" loading="lazy">
+                            <div class="menu-card-overlay"></div>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-card-header">
+                                <h3>Crumbly Oreo Shake</h3>
+                                <span class="menu-price">₹295</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="menu-item-price">295</div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h4>Rocher Hazelnut Shake</h4>
+
+                    <div class="luxury-menu-card reveal">
+                        <div class="menu-card-image">
+                            <img src="https://images.unsplash.com/photo-1550617931-e17a7b70dce2?auto=format&fit=crop&q=80&w=600" alt="Biscoff Cookie Shake" loading="lazy">
+                            <div class="menu-card-overlay"></div>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-card-header">
+                                <h3>Biscoff Cookie Shake</h3>
+                                <span class="menu-price">₹355</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="menu-item-price">355</div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h4>Crumbly Oreo Shake</h4>
-                    </div>
-                    <div class="menu-item-price">295</div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-info">
-                        <h4>Biscoff Cookie Shake</h4>
-                    </div>
-                    <div class="menu-item-price">355</div>
                 </div>
             </div>
 
@@ -283,6 +489,19 @@
             <p>&copy; 2025 WhitesSand. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919274314507?text=Hi%20WhitesSand!%20I'd%20like%20to%20book%20a%20table." target="_blank"
+        rel="noopener" class="whatsapp-float" aria-label="Chat on WhatsApp" title="Book via WhatsApp">
+        <svg width="40" height="40" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M16 0C7.164 0 0 7.164 0 16c0 2.824.739 5.48 2.032 7.776L0 32l8.448-2.016A15.923 15.923 0 0016 32c8.836 0 16-7.164 16-16S24.836 0 16 0zm0 29.333c-2.547 0-4.973-.707-7.04-1.947l-.507-.293-5.227 1.253 1.28-5.12-.32-.533A13.24 13.24 0 012.667 16c0-7.36 5.973-13.333 13.333-13.333S29.333 8.64 29.333 16 23.36 29.333 16 29.333z"
+                fill="#fff" />
+            <path
+                d="M23.573 19.68c-.4-.2-2.36-1.16-2.72-1.293-.36-.134-.627-.2-.893.2-.267.4-1.027 1.293-1.253 1.56-.227.266-.467.293-.867.093-.4-.2-1.693-.627-3.227-2-1.187-1.067-2-2.387-2.227-2.787-.226-.4-.026-.613.174-.813.173-.174.4-.467.6-.693.2-.227.267-.4.4-.667.133-.266.067-.493-.034-.693-.1-.2-.893-2.16-1.226-2.96-.32-.773-.64-.667-.893-.68-.227-.013-.48-.013-.733-.013s-.667.093-.987.493c-.32.4-1.24 1.214-1.24 2.96s1.267 3.44 1.44 3.68c.173.24 2.467 3.76 5.973 5.28.84.36 1.493.573 2 .733.84.267 1.6.227 2.2.134.667-.107 2.067-.853 2.36-1.667.293-.813.293-1.52.2-1.667-.093-.146-.36-.253-.76-.453z"
+                fill="#fff" />
+        </svg>
+    </a>
 
     <script src="js/script.js"></script>
 </body>

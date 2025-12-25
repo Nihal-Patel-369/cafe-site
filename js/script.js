@@ -1,6 +1,27 @@
 // Clint's Cafe - Interactive Elements
 document.addEventListener('DOMContentLoaded', () => {
 
+    // Welcome Screen Handler
+    const welcomeScreen = document.getElementById('welcomeScreen');
+    const body = document.body;
+
+    if (welcomeScreen) {
+        // Prevent body scroll while welcome screen is visible
+        body.classList.add('welcome-active');
+
+        // Auto-hide welcome screen after 3.5 seconds
+        setTimeout(() => {
+            welcomeScreen.classList.add('hidden');
+            
+            // Re-enable body scroll after fade-out animation completes
+            setTimeout(() => {
+                body.classList.remove('welcome-active');
+                // Remove element from DOM after animation
+                welcomeScreen.style.display = 'none';
+            }, 800); // Match CSS transition duration
+        }, 3500); // 3.5 seconds as specified
+    }
+
     // Mobile Menu Toggle
     const mobileToggle = document.querySelector('.mobile-toggle');
     const navLinks = document.querySelector('.nav-links');
@@ -387,4 +408,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize carousel
     initCarousel();
+
+    // Scroll Progress Indicator
+    const scrollProgress = document.querySelector('.scroll-progress');
+    if (scrollProgress) {
+        const updateScrollProgress = () => {
+            const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (window.scrollY / windowHeight) * 100;
+            scrollProgress.style.width = scrolled + '%';
+        };
+
+        window.addEventListener('scroll', updateScrollProgress, { passive: true });
+        updateScrollProgress();
+    }
 });
