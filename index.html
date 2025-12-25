@@ -3,11 +3,24 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <title>WhitesSand | Best Luxury Pool Cafe in Surat</title>
     <meta name="description"
         content="Experience WhitesSand, the best luxury cafe in Surat. Enjoy poolside dining, vibrant nightlife, and artisanal coffee near Dumas Road.">
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#D4AF37">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="WhitesSand">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="msapplication-TileColor" content="#D4AF37">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    
+    <!-- Icons -->
     <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="apple-touch-icon" href="images/icons/icon-192x192.png">
+    <link rel="manifest" href="/manifest.json">
 
     <!-- Local SEO Schema -->
     <script type="application/ld+json">
@@ -500,6 +513,18 @@
             <p>&copy; 2025 WhitesSand. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- PWA Install Banner -->
+    <div class="install-banner" id="installBanner" style="display: none;">
+        <div class="install-banner-content">
+            <div class="install-banner-text">
+                <strong>Install WhitesSand App</strong>
+                <span>Get the full experience on your device</span>
+            </div>
+            <button class="install-banner-btn" id="installButton">Install</button>
+            <button class="install-banner-close" id="installBannerClose">&times;</button>
+        </div>
+    </div>
 
     <!-- WhatsApp Floating Button -->
     <a href="https://wa.me/919274314507?text=Hi%20WhitesSand!%20I'd%20like%20to%20book%20a%20table." target="_blank"

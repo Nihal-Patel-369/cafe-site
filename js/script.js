@@ -421,4 +421,121 @@ document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('scroll', updateScrollProgress, { passive: true });
         updateScrollProgress();
     }
+
+    // Service Worker Registration
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js')
+                .then((registration) => {
+                    console.log('[Service Worker] Registered successfully:', registration.scope);
+                    
+                    // Check for updates
+                    registration.addEventListener('updatefound', () => {
+                        const newWorker = registration.installing;
+                        if (newWorker) {
+                            newWorker.addEventListener('statechange', () => {
+                                if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                                    console.log('[Service Worker] New version available');
+                                    // Optionally show update notification to user
+                                }
+                            });
+                        }
+                    });
+                })
+                .catch((error) => {
+                    console.error('[Service Worker] Registration failed:', error);
+                });
+        });
+    }
+
+    // PWA Install Prompt
+    let deferredPrompt;
+    const installButton = document.getElementById('installButton');
+    const installBanner = document.getElementById('installBanner');
+
+    window.addEventListener('beforeinstallprompt', (e) => {
+        // Prevent the mini-infobar from appearing on mobile
+        e.preventDefault();
+        // Stash the event so it can be triggered later
+        deferredPrompt = e;
+        
+        // Show install button/banner if exists
+        if (installButton) {
+            installButton.style.display = 'block';
+        }
+        if (installBanner) {
+            installBanner.style.display = 'flex';
+        }
+    });
+
+    // Handle install button click
+    if (installButton) {
+        installButton.addEventListener('click', async () => {
+            if (!deferredPrompt) {
+                return;
+            }
+
+            // Show the install prompt
+            deferredPrompt.prompt();
+
+            // Wait for the user to respond to the prompt
+            const { outcome } = await deferredPrompt.userChoice;
+            console.log('[PWA] User response to install prompt:', outcome);
+
+            // Clear the deferredPrompt
+            deferredPrompt = null;
+
+            // Hide install button/banner
+            if (installButton) {
+                installButton.style.display = 'none';
+            }
+            if (installBanner) {
+                installBanner.style.display = 'none';
+            }
+        });
+    }
+
+    // Handle install banner close button
+    const installBannerClose = document.getElementById('installBannerClose');
+    if (installBannerClose && installBanner) {
+        installBannerClose.addEventListener('click', () => {
+            installBanner.style.display = 'none';
+            // Store preference to not show again (optional)
+            localStorage.setItem('installBannerDismissed', 'true');
+        });
+    }
+
+    // Check if banner was previously dismissed
+    if (installBanner && localStorage.getItem('installBannerDismissed') === 'true') {
+        installBanner.style.display = 'none';
+    }
+
+    // Handle app installed event
+    window.addEventListener('appinstalled', () => {
+        console.log('[PWA] App installed successfully');
+        deferredPrompt = null;
+        
+        // Hide install button/banner
+        if (installButton) {
+            installButton.style.display = 'none';
+        }
+        if (installBanner) {
+            installBanner.style.display = 'none';
+        }
+
+        // Optionally show success message
+        // showNotification('WhitesSand installed successfully!');
+    });
+
+    // Check if app is already installed
+    if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone) {
+        console.log('[PWA] App is running in standalone mode');
+        // Hide install button if app is already installed
+        if (installButton) {
+            installButton.style.display = 'none';
+        }
+        if (installBanner) {
+            installBanner.style.display = 'none';
+        }
+    }
 });
